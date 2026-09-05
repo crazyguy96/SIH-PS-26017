@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper text-ink dark:bg-[#0F1720] dark:text-[#E7E9E2];
+  }
+  ::selection {
+    @apply bg-teal/20;
+  }
+  *:focus-visible {
+    outline: 2px solid #2F5D62;
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.hairline {
+  @apply border border-line dark:border-[#2A3742];
+}
+
+.hairline-b {
+  @apply border-b border-line dark:border-[#2A3742];
+}
+
+.hairline-t {
+  @apply border-t border-line dark:border-[#2A3742];
+}
